@@ -6,18 +6,20 @@ import java.sql.SQLException;
 
 public class JdbcManager {
 	//check database name when MySql is started
-	private String jdbcUrl = "jdbc:mysql://localhost:3306/youTunes?";
-	private String jdbcUserName = "youtunes_user";
-	private String jdbcPassword = "PASSWORD";	
+	private static String jdbcUrl = "jdbc:mysql://localhost:3306/youTunes?";	
+	private static String jdbcUserName = "root";
+	private static String jdbcPassword = "root";	
+	//private static String jdbcUserName = "youtunes_user@localhost";
+	//private static String jdbcPassword = "PASSWORD";	
 	java.sql.Connection con = null;
 	
 	
-	public static Connection getConn(String jdbcUrl,String jdbcUserName,String jdbcPassword) throws SQLException {
+	public  Connection getConn() throws SQLException {
 		java.sql.Connection con = null;
 		
 		try {			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con= java.sql.DriverManager.getConnection(jdbcUrl +"user="+jdbcUserName+"password="+jdbcPassword);
+			con= java.sql.DriverManager.getConnection(jdbcUrl +"user="+jdbcUserName+"&password="+jdbcPassword);
 			System.out.println("Connection Success");
 			return con;
 			
@@ -29,8 +31,9 @@ public class JdbcManager {
 		}		
 	}
 	
-	public void closeConn(Connection con) throws SQLException {
+	public void closeConn() throws SQLException {
 		try {
+			con= java.sql.DriverManager.getConnection(jdbcUrl +"user="+jdbcUserName+"&password="+jdbcPassword);
 			con.close();
 			System.out.println("Connection Closed.");
 		}catch(SQLException e){

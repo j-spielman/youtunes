@@ -10,5 +10,7 @@ public interface GenericDao<E,K> {
 	void remove(K key);
 	
 	List<E> list();
+	
+	E find(K key);
 		
 }
