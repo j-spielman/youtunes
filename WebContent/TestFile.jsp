@@ -1,7 +1,8 @@
 <%@page import="dbBeans.JdbcArtistDao"%>
+<%@page import="dbBeans.JdbcAlbumDao"%>
 <%@page import="dbBeans.Artist"%>
+<%@page import="dbBeans.Album"%>
 <%@page import="java.util.List"%>
-<%@page import="java.util.Iterator"%>
 <%@page import="javax.servlet.*"%>
 <%@page import="java.io.*"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -46,9 +47,13 @@
 	Artist serachable=db.find((long)1);
 	out.print(serachable.toString());
 	
-	
-	
-	
+	out.print("<h5>Dropdown test</h5>");	
+	out.print("<select name ='artist'>");
+	out.print("<option value='null'>--Select--</option>");		
+		for(Artist a: display){
+			out.print("<option value='"+a.getArtistid()+"'>"+a.getFirstName()+" "+a.getLastName()+"</option>");
+		}
+		out.print("</select>");	
 %>
 </body>
 </html>

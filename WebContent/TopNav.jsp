@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="dbBeans.JdbcArtistDao"%>
+<%@page import="dbBeans.JdbcAlbumDao"%>
+<%@page import="dbBeans.Artist"%>
+<%@page import="dbBeans.Album"%>
+<%@page import="java.util.List"%>
+<%@page import="javax.servlet.*"%>
+<%@page import="java.io.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +28,7 @@
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="List.jsp">Artists</a></li>
+        <li class="tab"><a href="artistList.jsp">Artists</a></li>
         <li class="tab"><a href="About.jsp">About Us</a></li>        
         <li class="tab"><a href="Contact.jsp">Contact Us</a></li>
       </ul>

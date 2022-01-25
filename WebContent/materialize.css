@@ -2367,6 +2367,8 @@ audio:not([controls]) {
  */
 img {
   border-style: none;
+  width: 125px;
+  height: 175px;
 }
 
 /**
@@ -4544,7 +4546,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1 {
   font-size: 4.2rem;
   line-height: 110%;
-  margin: 2.8rem 0 1.68rem 0;
+  margin: 2.8rem 0 1.68rem 0;  
 }
 
 h2 {
@@ -4565,7 +4567,7 @@ h4 {
   margin: 1.52rem 0 0.912rem 0;
 }
 
-h5 {
+h5 {  
   font-size: 1.64rem;
   line-height: 110%;
   margin: 1.0933333333rem 0 0.656rem 0;
@@ -5358,6 +5360,9 @@ small {
 
 button.btn-floating {
   border: none;
+}
+.btn-right{
+	text-align: right;
 }
 
 .fixed-action-btn {
