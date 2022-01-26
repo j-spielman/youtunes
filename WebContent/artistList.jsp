@@ -12,6 +12,7 @@
 	<main>
 	<h1>All Artists</h1>
 	<a href="albumsList.jsp">View All Albums</a>
+	<a href="artistNew.jsp">Add a New artist</a>
 	<%
 		JdbcArtistDao db = new JdbcArtistDao();
 		List<Artist> display = db.list();	
