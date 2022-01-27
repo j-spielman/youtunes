@@ -10,6 +10,7 @@
 <body>
 	<main>
 		<h1>All Albums</h1>
+		<a href='albumNew.jsp'>Add an Album</a>
 		<%
 			JdbcAlbumDao db= new JdbcAlbumDao();
 			List<Album> display = db.list();

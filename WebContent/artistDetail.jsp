@@ -6,32 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Artist Detail</title>
-		<% /*
-			if(request.getMethod().equals("Post")){
-				try{
-					JdbcArtistDao db = new JdbcArtistDao();
-					String id = request.getParameter("artistid");					
-					Artist toUpdate = db.find(Long.parseLong(id));
-					String fName = request.getParameter("formFName");
-					String lName = request.getParameter("formLName");
-					
-					toUpdate.setFirstName(fName);
-					toUpdate.setLastName(lName);
-					
-					db.update(toUpdate);		
-					Artist selected = db.find(Long.parseLong("artistid"));
-				}catch(Exception e_){
-					System.out.print("Update Failed");
-				}
-			}
-		*/
-		%>
 		<%		
 			Artist selected = null;
 			try{
 				String artistId = request.getParameter("artistid");
 				JdbcArtistDao db = new JdbcArtistDao();
-				selected= db.find(Long.parseLong(artistId));				
+				selected= db.find(Long.parseLong(artistId));								
 			}
 			catch(Exception e){
 				out.print("Variable not passed");
@@ -44,6 +24,21 @@
 		<h5>ID: <%out.print(selected.getArtistid());%> Artist: <%out.print(selected.getFirstName()+" "+selected.getLastName());%></h5>
 		</div>				
 	</div>	
+	<div class='section'>
+	<form method ="post" action="artistUpdated.jsp">
+	<input type='hidden' name='artistid' value='<%out.print(selected.getArtistid());%>'>
+	<label>First Name: </label><input type='text' name='fName' size='35' maxlength='35'value='<%out.print(selected.getFirstName());%>' /><br />
+	<label>Last Name: </label><input type='text' name='lName' size='35' maxlength='35' value='<%out.print(selected.getLastName());%>' /><br />
+	<input type='submit' value='Update' />
+	</form>
+	</div>
+	<div class="section">
+	<div class="divider"></div>
+	<form method ="post" action="artistRemoved.jsp"> 
+	<input type='hidden' name='artistid' value='<%out.print(selected.getArtistid());%>'>
+	<input type='submit' value='Remove' />
+	</form>
+	</div>
 </main>
 </body>
 <footer>

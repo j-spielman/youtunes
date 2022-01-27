@@ -5,8 +5,12 @@
 <%@page import="dbBeans.Artist"%>
 <%@page import="dbBeans.Album"%>
 <%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="javax.servlet.*"%>
 <%@page import="java.io.*"%>
+<%@page import="java.util.stream.Collectors"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
