@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	Artist Update confirmation 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="TopNav.jsp" %>    
@@ -7,6 +11,7 @@
 <%	
 	String message = "";
 	JdbcArtistDao db = new JdbcArtistDao();
+	//attempt to update artist record based on new First/Last names and passed artistID
 	try{
 		String fNameIn = request.getParameter("fName");
 		String lNameIn = request.getParameter("lName");

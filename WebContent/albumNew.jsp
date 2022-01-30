@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	New Album Page 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="TopNav.jsp" %>   
@@ -16,10 +20,8 @@
 			for(Album a: albumDisplay){				
 				allGenres.add(a.getGenre());				
 			}
-			
-			List<String> uniqueGenres = allGenres.stream().distinct().collect(Collectors.toList());
-			
-			
+			//unique genre list
+			List<String> uniqueGenres = allGenres.stream().distinct().collect(Collectors.toList());					
 			
 %>
 </head>
@@ -27,6 +29,7 @@
 <div class="container">
 <h3>Add New Album</h3>
 	<div class="section">
+	<!-- New -->
 	<form method="post" action="albumConfirmation.jsp">	
 	<label>Artist: </label>			
 	<select name="artistid" class="browser-default">
@@ -47,6 +50,7 @@
 	%>
 	</select>
 	<label>Price: </label><input type='text' name='price' size='55' maxlength='55' value=9.99><br />	
+<!-- Default image url provided for albums without covers -->
 	<label>Image Url: </label><input type='text' name='url' size='55' maxlength='55' value='img/placeholder.jpg'><br />
 	<input type='submit' value='Update' />
 	</form>

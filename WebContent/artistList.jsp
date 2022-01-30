@@ -7,16 +7,14 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Artists</title>
-</head>
-<body>
-	<main>
-	<h1>All Artists</h1>
-	<a href="albumsList.jsp">View All Albums</a>
-	<a href="artistNew.jsp">Add a New artist</a>
 	<%
 		JdbcArtistDao db = new JdbcArtistDao();
 		List<Artist> display = db.list();	
 	%>
+</head>
+<body>
+	<main>
+	<h1>All Artists</h1>	
 	<div class="container">
 		<%
 			for(Artist a: display){				
@@ -29,6 +27,7 @@
 			}
 		%>		
 	</div>	
+	<h5><a href="albumsList.jsp">View All Albums</a>|<a href="artistNew.jsp">Add a New artist</a></h5>
 	</main>
 </body>
 	<footer>

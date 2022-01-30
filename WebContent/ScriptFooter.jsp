@@ -1,4 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	Generic script footer. 
+ -->
+ <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>

@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	Album Update confirmation 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="TopNav.jsp" %>    
@@ -8,6 +12,7 @@
 	String message = "";
 	JdbcAlbumDao db = new JdbcAlbumDao();
 	try{
+		//create new album from passed values and update based on passed album ID.
 		int albumIdIn = Integer.parseInt(request.getParameter("albumid"));
 		int artistIdIn = Integer.parseInt(request.getParameter("artistid"));
 		String titleIn = request.getParameter("title");
@@ -24,7 +29,7 @@
 	}
 %>
 <meta charset="ISO-8859-1">
-<title>Artist Update confirmation</title>
+<title>Album Update confirmation</title>
 </head>
 <body>
 <h1><%out.print(message); %></h1><br />

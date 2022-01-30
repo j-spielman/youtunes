@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	Artist Details page 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="TopNav.jsp" %>    
@@ -26,6 +30,7 @@
 	</div>	
 	<div class='section'>
 	<form method ="post" action="artistUpdated.jsp">
+	<!-- Provide form for updating artist info or removal as necessary. Filled with existing values -->
 	<input type='hidden' name='artistid' value='<%out.print(selected.getArtistid());%>'>
 	<label>First Name: </label><input type='text' name='fName' size='35' maxlength='35'value='<%out.print(selected.getFirstName());%>' /><br />
 	<label>Last Name: </label><input type='text' name='lName' size='35' maxlength='35' value='<%out.print(selected.getLastName());%>' /><br />

@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	New album confirmation page. 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="TopNav.jsp" %>    
@@ -9,6 +13,7 @@
 	JdbcAlbumDao db = new JdbcAlbumDao();
 	List<Album> albumList= db.list();
 	int newID = (albumList.size()+1);
+	//create a new album and attempt to add it to the database. Alert user with confirmation or error.
 	try{		
 		int artistIdIn = Integer.parseInt(request.getParameter("artistid"));
 		String titleIn = request.getParameter("title");

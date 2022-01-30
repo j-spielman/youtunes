@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	Artist Removal confirmation 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="TopNav.jsp" %>    
@@ -7,7 +11,8 @@
 <%	
 	String message = "";
 	JdbcArtistDao db = new JdbcArtistDao();
-	try{
+	//attempt to remove artist based on passed artistId.
+	try{		
 		Long idRemove = Long.parseLong(request.getParameter("artistid"));		
 		db.remove(idRemove);
 		message = "Artist Removed!";

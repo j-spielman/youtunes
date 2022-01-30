@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	Top navigation bar for each page with links and clickable logo 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@page import="dbBeans.JdbcArtistDao"%>
@@ -26,13 +30,14 @@
 <body>
 <nav class="nav-extended">
     <div class="nav-wrapper">
-      <a href="index.jsp" class="brand-logo center">YouTunes Logo</a>      
+      <a href="index.jsp" class="brand-logo center">YouTunes</a>      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       </ul>
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
         <li class="tab"><a href="artistList.jsp">Artists</a></li>
+        <li class="tab"><a href="survey.jsp">Music Survey</a></li>
         <li class="tab"><a href="About.jsp">About Us</a></li>        
         <li class="tab"><a href="Contact.jsp">Contact Us</a></li>
       </ul>
