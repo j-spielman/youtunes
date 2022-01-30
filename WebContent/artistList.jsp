@@ -1,3 +1,7 @@
+<!--
+	Joseph Spielman|YouTunes|1/30/22
+	Artist List page. 
+ -->
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ include file="TopNav.jsp" %>    
@@ -17,6 +21,7 @@
 	<h1>All Artists</h1>	
 	<div class="container">
 		<%
+		//List all existing artists with select buttons for details page.
 			for(Artist a: display){				
 				out.print("<form method='post' action= 'artistDetail.jsp'>");
 				out.print("<div class='divider'></div>");
